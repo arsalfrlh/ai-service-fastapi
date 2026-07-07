@@ -1,0 +1,27 @@
+# buat virtual env python dulu "python -m venv venv"
+# aktifkan virtual env "venv\Scripts\activate" dan non aktifkan "deactivate"
+# install semua library "pip install fastapi uvicorn httpx pydantic ollama qdrant-client python-multipart pymupdf python-docx python-pptx openpyxl beautifulsoup4"
+# jalankan fast apinya "uvicorn nama_file:app --reload"
+# setelah jalan bisa akses web apinya di "http://127.0.0.1:8000" test di "http://127.0.0.1:8000/docs"
+
+# buat collection baru di qdrant bisa lewat postman atau bisa lewat gui qdrant
+# PUT http://localhost:6333/collections/products
+# {
+#   "vectors": {
+#     "size": 768,
+#     "distance": "Cosine"
+#   }
+# }
+
+fastapi
+uvicorn
+pydantic
+ollama
+qdrant-client
+httpx
+python-multipart
+pymupdf
+python-docx
+python-pptx
+openpyxl
+beautifulsoup4
