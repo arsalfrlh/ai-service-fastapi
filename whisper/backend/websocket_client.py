@@ -1,0 +1,34 @@
+from fastapi import FastAPI, WebSocket, WebSocketDisconnect
+
+app = FastAPI()
+clients: list[WebSocket] = []
+
+@app.websocket("/ws")
+async def connect_websocket(websocket: WebSocket):
+    await websocket.accept()
+    clients.append(websocket) # tambahkan client websocket ke variabel list
+
+    await websocket.send_json({
+        "event": "websocket:connected",
+        "data": {
+            "clients": len(clients)
+        }
+    })
+
+    try:
+        while True:
+            data = await websocket.receive_json()
+
+            if(data['event'] == "call:client"):
+                message = None
+                if("data" in data and "message" in data['data']):
+                    message = data['data']['message']
+                await websocket.send_json({
+                    "event": "call:server",
+                    "data": {
+                        "client": message,
+                        "server": "Hello From Fast API"
+                    }
+                })
+    except WebSocketDisconnect:
+        clients.remove(websocket)
