@@ -1,0 +1,77 @@
+PHP adalah bahasa pemrograman yang banyak digunakan untuk membangun aplikasi web. PHP dapat dijalankan pada server dan digunakan untuk menghasilkan response yang kemudian dikirimkan kepada client melalui HTTP. PHP mendukung berbagai paradigma pemrograman dan memiliki ekosistem library serta framework yang luas.
+
+Laravel adalah framework aplikasi web berbasis PHP yang menyediakan berbagai fitur untuk mempermudah pengembangan aplikasi. Laravel menggunakan konsep seperti routing, controller, middleware, model, migration, validation, authentication, authorization, queue, event, notification, dan task scheduling.
+
+Routing dalam Laravel digunakan untuk menentukan bagaimana aplikasi merespons HTTP request tertentu. Sebuah route dapat diarahkan ke closure atau controller. Route juga dapat menggunakan parameter sehingga aplikasi dapat menerima nilai tertentu dari URL.
+
+Controller digunakan untuk mengelompokkan logic yang berkaitan dengan request aplikasi. Controller menerima request, menjalankan proses yang diperlukan, kemudian menghasilkan response. Dalam aplikasi yang menggunakan MVC, controller menjadi bagian yang menghubungkan request dengan model dan view.
+
+Middleware adalah lapisan yang memproses HTTP request sebelum request tersebut mencapai controller. Middleware dapat digunakan untuk authentication, authorization, logging, pemeriksaan header, pembatasan akses, dan berbagai pemeriksaan lainnya.
+
+Laravel memiliki Eloquent ORM yang memungkinkan developer berinteraksi dengan database menggunakan model PHP. Setiap model biasanya merepresentasikan sebuah tabel database. Eloquent menyediakan fitur seperti query builder, relationship, mass assignment, scopes, casting, dan eager loading.
+
+Migration digunakan untuk mendefinisikan struktur database menggunakan kode. Migration dapat membuat tabel, menambahkan kolom, mengubah struktur tabel, maupun menghapus tabel. Migration membantu developer menjaga perubahan struktur database agar dapat dilacak dan dijalankan secara konsisten.
+
+Contoh migration dapat digunakan untuk membuat tabel users yang memiliki id, name, email, password, dan timestamp. Struktur database dapat dibuat melalui command artisan kemudian dijalankan menggunakan migration.
+
+Laravel menyediakan validation untuk memeriksa data yang diterima dari user. Validation dapat memastikan bahwa field tertentu wajib diisi, memiliki format email yang benar, berupa angka, memiliki panjang tertentu, atau memenuhi aturan lainnya. Validation membantu mencegah data yang tidak sesuai masuk ke dalam sistem.
+
+Authentication digunakan untuk menentukan identitas pengguna yang sedang mengakses aplikasi. Setelah pengguna berhasil login, sistem dapat membuat session atau token yang digunakan untuk mengenali pengguna pada request berikutnya.
+
+Authorization berbeda dengan authentication. Authentication menjawab pertanyaan siapa pengguna tersebut, sedangkan authorization menentukan apakah pengguna tersebut memiliki izin untuk melakukan suatu tindakan.
+
+Laravel juga memiliki queue untuk menjalankan pekerjaan secara asynchronous. Queue cocok digunakan untuk pekerjaan yang membutuhkan waktu lama seperti mengirim email, memproses file, membuat laporan, atau menjalankan pekerjaan background lainnya.
+
+Redis adalah sistem penyimpanan data in-memory yang dapat digunakan sebagai cache, session store, queue backend, dan penyimpanan data sementara. Karena data disimpan di memory, Redis dapat memberikan akses data yang sangat cepat untuk berbagai kebutuhan aplikasi.
+
+Caching digunakan untuk mengurangi pekerjaan yang harus dilakukan aplikasi secara berulang. Data yang sering dibaca dapat disimpan di cache sehingga aplikasi tidak selalu harus mengambil data dari database. Cache yang baik dapat membantu mengurangi beban database dan mempercepat response aplikasi.
+
+MySQL adalah relational database management system yang menyimpan data dalam tabel dan menggunakan SQL untuk melakukan operasi terhadap data. Database relational memungkinkan tabel memiliki hubungan melalui primary key dan foreign key.
+
+Primary key adalah kolom atau kombinasi kolom yang digunakan untuk mengidentifikasi setiap record secara unik dalam sebuah tabel. Foreign key digunakan untuk membuat hubungan antara sebuah tabel dengan tabel lainnya dengan merujuk pada key di tabel yang lain.
+
+SQL memiliki beberapa operasi dasar seperti SELECT, INSERT, UPDATE, dan DELETE. SELECT digunakan untuk membaca data, INSERT digunakan untuk menambahkan data, UPDATE digunakan untuk memperbarui data, dan DELETE digunakan untuk menghapus data.
+
+Query SELECT dapat menggunakan WHERE untuk memberikan kondisi, ORDER BY untuk mengurutkan data, GROUP BY untuk mengelompokkan data, dan LIMIT untuk membatasi jumlah record yang dikembalikan.
+
+Index pada database digunakan untuk mempercepat pencarian data pada kolom tertentu. Namun index juga memiliki biaya karena membutuhkan storage tambahan dan dapat memperlambat operasi INSERT, UPDATE, atau DELETE ketika index harus diperbarui.
+
+REST API adalah sebuah pendekatan untuk menyediakan interface yang memungkinkan client berkomunikasi dengan server menggunakan protokol HTTP. API biasanya menggunakan endpoint tertentu dan metode HTTP seperti GET, POST, PUT, PATCH, dan DELETE.
+
+HTTP GET biasanya digunakan untuk mengambil data. POST biasanya digunakan untuk membuat resource baru. PUT dapat digunakan untuk mengganti resource, PATCH dapat digunakan untuk memperbarui sebagian resource, dan DELETE digunakan untuk menghapus resource.
+
+JSON sering digunakan sebagai format pertukaran data pada REST API. JSON dapat merepresentasikan object, array, string, number, boolean, dan null. Response API biasanya berisi data yang dapat diproses oleh aplikasi web atau mobile.
+
+Authentication pada REST API dapat menggunakan token. Client mengirimkan token pada request dan server memvalidasi token tersebut sebelum memberikan akses ke resource yang dilindungi.
+
+Backend adalah bagian aplikasi yang bertanggung jawab terhadap logic bisnis, database, authentication, authorization, processing, dan penyediaan API. Frontend atau mobile application dapat berkomunikasi dengan backend menggunakan HTTP API.
+
+Dalam aplikasi backend, separation of concerns membantu memisahkan tanggung jawab setiap bagian sistem. Controller dapat menangani request, service dapat menangani business logic, repository dapat menangani akses data, sedangkan model merepresentasikan data.
+
+Docker memungkinkan aplikasi dijalankan di dalam container yang memiliki environment dan dependency tertentu. Container dapat membantu membuat environment development, testing, dan production menjadi lebih konsisten.
+
+Docker image berisi template yang digunakan untuk membuat container. Container adalah instance yang berjalan dari sebuah image. Dockerfile digunakan untuk mendefinisikan bagaimana sebuah image dibangun.
+
+Docker volume digunakan untuk menyimpan data di luar lifecycle container. Dengan volume, data dapat tetap tersedia ketika sebuah container dihentikan atau dibuat ulang.
+
+Redis dan MySQL memiliki karakteristik berbeda. MySQL merupakan relational database yang dirancang untuk penyimpanan data persisten, sedangkan Redis merupakan in-memory data store yang sering digunakan untuk cache, queue, dan kebutuhan data sementara.
+
+Backend yang baik harus memperhatikan keamanan, validasi input, authentication, authorization, error handling, logging, database design, caching, dan performance. Sistem yang baik juga perlu memiliki struktur kode yang mudah dipelihara dan dikembangkan.
+
+Dalam pengembangan aplikasi web, HTTP request dikirim oleh client ke server. Server memproses request, menjalankan business logic jika diperlukan, mengambil atau mengubah data pada database, kemudian mengirimkan HTTP response kembali kepada client.
+
+Application Programming Interface atau API adalah kontrak komunikasi antara dua software. API menentukan bagaimana client meminta data atau menjalankan operasi tertentu serta bagaimana server memberikan response.
+
+MySQL dan Laravel dapat digunakan bersama untuk membangun aplikasi web. Laravel dapat menggunakan Eloquent atau query builder untuk berkomunikasi dengan MySQL. Konfigurasi koneksi database biasanya disimpan melalui environment variable agar credential tidak ditulis secara langsung di source code.
+
+Environment variable berguna untuk menyimpan konfigurasi yang berbeda antara development, testing, dan production. Contohnya adalah database host, database port, database username, database password, application key, dan konfigurasi layanan eksternal.
+
+Queue worker bertugas mengambil job dari queue kemudian menjalankannya. Jika sebuah aplikasi memiliki pekerjaan berat seperti mengirim banyak email atau memproses video, pekerjaan tersebut dapat dimasukkan ke queue agar request utama dapat memberikan response lebih cepat.
+
+Event-driven architecture memungkinkan sebuah kejadian menghasilkan event yang kemudian dapat ditangani oleh listener atau subscriber. Contohnya ketika sebuah order dibuat, aplikasi dapat menghasilkan event OrderCreated dan listener dapat mengirim notifikasi atau mencatat aktivitas.
+
+Logging digunakan untuk mencatat informasi mengenai aktivitas aplikasi, error, warning, dan kejadian penting lainnya. Log membantu developer melakukan debugging dan mengetahui apa yang terjadi ketika sistem mengalami masalah.
+
+Database transaction digunakan ketika beberapa operasi database harus berhasil sebagai satu kesatuan. Jika salah satu operasi gagal, transaction dapat di-rollback sehingga perubahan yang sebelumnya dilakukan dapat dibatalkan.
+
+Untuk menjaga performa aplikasi, developer dapat menggunakan caching, database indexing, query optimization, pagination, queue, connection pooling, dan monitoring. Optimisasi harus dilakukan berdasarkan pengukuran sehingga bottleneck yang sebenarnya dapat diketahui.

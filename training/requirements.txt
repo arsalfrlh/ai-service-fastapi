@@ -1,0 +1,20 @@
+py -3.11 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip setuptools wheel
+pip install transformers datasets accelerate peft trl huggingface_hub sentencepiece safetensors
+pip install bitsandbytes
+https://pytorch.org/get-started/locally | pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu126
+python -m bitsandbytes
+pip install -U huggingface_hub
+hf download Qwen/Qwen2.5-0.5B-Instruct --local-dir .\models\Qwen2.5-0.5B-Instruct
+hf download Qwen/Qwen2.5-0.5B --local-dir .\models\Qwen2.5-0.5B
+
+hf download yahma/alpaca-cleaned `
+    alpaca_data_cleaned.json `
+    --repo-type dataset `
+    --local-dir .\datasets\alpaca-cleaned
+
+hf download cahya/alpaca-id-cleaned `
+    alpaca-id-cleaned.jsonl `
+    --repo-type dataset `
+    --local-dir .\datasets\alpaca-id-cleaned
