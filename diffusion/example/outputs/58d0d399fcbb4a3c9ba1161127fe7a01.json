@@ -1,0 +1,19 @@
+{
+  "image_id": "58d0d399fcbb4a3c9ba1161127fe7a01",
+  "filename": "58d0d399fcbb4a3c9ba1161127fe7a01.png",
+  "mode": "txt2img",
+  "prompt": "a cinematic portrait of a young man in a futuristic cyberpunk city, neon lights, rain, realistic face, highly detailed",
+  "negative_prompt": "blurry, low quality, distorted face, bad anatomy, extra fingers",
+  "width": 512,
+  "height": 512,
+  "steps": 20,
+  "guidance_scale": 7.0,
+  "strength": null,
+  "seed": 0,
+  "scheduler": "euler_a",
+  "lora": null,
+  "lora_scale": null,
+  "source_filename": null,
+  "model": "F:\\model\\diffusion\\v1-5-pruned-emaonly.safetensors",
+  "created_at": "2026-10-01T21:16:38+0700"
+}

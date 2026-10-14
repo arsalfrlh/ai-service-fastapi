@@ -1,0 +1,9 @@
+# Install PyTorch CUDA separately first; see README.md.
+diffusers==0.40.0
+transformers>=4.45,<6
+accelerate>=1.2
+safetensors>=0.4
+fastapi>=0.115
+uvicorn[standard]>=0.34
+python-multipart>=0.0.20
+pillow>=10
