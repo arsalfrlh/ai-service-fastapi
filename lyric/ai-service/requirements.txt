@@ -1,0 +1,9 @@
+# C:\minio>minio.exe server C:\minio\data --console-address ":9001"
+
+fastapi
+uvicorn[standard]
+faster-whisper
+minio
+httpx
+python-dotenv
+python-multipart
