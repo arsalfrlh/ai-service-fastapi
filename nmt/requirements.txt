@@ -1,0 +1,41 @@
+# pip install -r requirements.txt
+# C:\minio>minio.exe server C:\minio\data --console-address ":9001"
+# uvicorn app.main:app --reload
+
+# curl -X 'POST' \
+#   'http://127.0.0.1:8000/api/image/text-to-image' \
+#   -H 'accept: */*' \
+#   -H 'Content-Type: application/json' \
+#   -d '{
+#   "prompt": "a beautiful mountain landscape, cinematic lighting, highly detailed",
+#   "negative_prompt": "blurry, low quality, distorted",
+#   "width": 512,
+#   "height": 512,
+#   "num_inference_steps": 20,
+#   "guidance_scale": 7.5,
+#   "seed": null
+# }'
+
+# inpainting model
+# hf download `
+#   stable-diffusion-v1-5/stable-diffusion-inpainting `
+#   sd-v1-5-inpainting.ckpt `
+#   --local-dir C:\model\diffusion\inpainting
+
+fastapi
+uvicorn[standard]
+
+torch
+torchvision
+
+diffusers
+transformers
+accelerate
+safetensors
+huggingface_hub
+
+pillow
+python-dotenv
+
+minio
+python-multipart
